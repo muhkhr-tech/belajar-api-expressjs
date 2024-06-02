@@ -1,6 +1,6 @@
 const express = require('express')
-const user = require('./routes/user')
-const {user: userModel} = require('./models')
+const user = require('./src/routes/user')
+const {user: userModel} = require('./src/models')
 const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
 const path = require('path');

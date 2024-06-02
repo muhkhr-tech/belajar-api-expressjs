@@ -1,5 +1,5 @@
 const express = require('express')
-const sequelize = require('../database')
+const sequelize = require('../../database')
 const user = require('../models').user
 
 const router = express.Router()
