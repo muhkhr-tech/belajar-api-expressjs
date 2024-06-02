@@ -17,7 +17,6 @@ const isValid = (req, res, next) => {
         jwt.verify(req.cookies.token, SECRET)
         next()
     } catch (err) {
-        // res.sendFile(path.join(__dirname, '/index.html'))
         res.redirect('/login')
     }
 }
@@ -47,7 +46,7 @@ app.post('/login', async (req, res) => {
     
         const token = jwt.sign({
             user: 'rafiq123'
-        }, SECRET, {expiresIn: '30s'})
+        }, SECRET, {expiresIn: '5m'})
     
         res.cookie('token', token).redirect('/')
     } catch (err) {
